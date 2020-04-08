@@ -12,4 +12,4 @@ set_project_warnings(default)
 
 enable_testing()
 add_subdirectory(external/catch2)
-add_subdirectory(src)
+add_subdirectory(list)

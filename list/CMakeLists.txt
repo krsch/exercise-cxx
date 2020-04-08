@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(list CXX)
+add_executable(list_test test.cpp list.cpp)
+add_executable(list main.cpp list.cpp)
+target_link_libraries(list_test PUBLIC Catch2::Catch2 default)
+target_link_libraries(list PUBLIC Catch2::Catch2 default)
+catch_discover_tests(list_test TEST_PREFIX list::)
