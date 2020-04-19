@@ -7,6 +7,7 @@ void check_equal(FwdIt begin, FwdIt end, List const* iter1) {
     for (auto iter = begin; iter != end; ++iter) {
         REQUIRE(iter1);
         CHECK(iter1->value == *iter);
+        iter1 = iter1->next.get();
     }
     CHECK(iter1 == nullptr);
 }
